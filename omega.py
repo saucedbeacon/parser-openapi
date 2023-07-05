@@ -233,7 +233,7 @@ while True:
   def blibli(url):
     if 'http' not in url:
       url = "https://" + url
-    s = cloudscraper.create_scraper()
+    s = cloudscraper.create_scraper(browser='chrome', platform='windows', mobile=False, desktop=True)
     k = url.split('/')
     p = s.get("https://blibli.app.link/" + k[3], allow_redirects=False)
     n = p.headers['Location']
