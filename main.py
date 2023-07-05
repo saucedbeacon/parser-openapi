@@ -64,3 +64,4 @@ def parse():
     except Exception as e:
         print(e)
         return buildReturn(False, False, True)
+app.run("0.0.0.0", port=3000)
